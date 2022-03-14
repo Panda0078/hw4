@@ -1,8 +1,24 @@
 <h1>Login</h1>
 
 <%= form_with url: "/sessions" do |form| %>
+
+  <div class="mb-3">
+    <p>
+    <%= form.label "email", class: "form-label" %>
+    <%= form.text_field "email", class: "form-control" %>
+    <p>
+  </div>
+
+  <div class="mb-3">
+    <p>
+    <%= form.label "password", class: "form-label" %>
+    <%= form.password_field "password", class: "form-control" %>
+     <p>
+  </div>
   
-  <p>
-    <%= form.submit "Login" %>
-  </p>
+  <div>
+    <%= form.submit "Login", class: "btn btn-success" %>
+  </div>
+
+
 <% end %>
