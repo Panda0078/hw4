@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
 
   def index
-    @places = Place.where({ user_id: @current_user.id})
+    @places = Place.all
   end
 
   def show
