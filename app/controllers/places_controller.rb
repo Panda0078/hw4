@@ -13,8 +13,10 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(params["place"])
-    @place.save
+    if @current_user
+      @place = Place.new(params["place"])
+      @post.user_id = @current_user.id
+      @place.save
     redirect_to "/places"
   end
 
