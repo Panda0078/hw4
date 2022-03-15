@@ -1,12 +1,13 @@
 <h1>New Place</h1>
 
 <%= form_with model: @place do |form| %>
+  <div class="mb-3">
+    <%= form.label "name", class: "form-label" %>
+    <%= form.text_field "name", class: "form-control" %>
+  </div>
+  
   <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
-  </p>
-  <p>
-    <%= form.submit %>
+    <%= form.submit "Create Place", class: "btn btn-primary" %>
   </p>
 
   You must first <a href="/sessions/new">login or sign up </a> to post.
